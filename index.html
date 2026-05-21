@@ -311,7 +311,8 @@
     document.getElementById('error').style.display = 'none';
     document.getElementById('genBtn').disabled = true;
 
-    let url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${w}&height=${h}&model=${model}&enhance=${enhance}&seed=${seed}&nologo=true`;
+    const apiKey = 'sk_oXKPazMpCsTlY6evmRn5Ye7c3SOmntU0';
+    let url = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${w}&height=${h}&model=${model}&enhance=${enhance}&seed=${seed}&nologo=true&key=${apiKey}`;
     if (negative) url += `&negative=${encodeURIComponent(negative)}`;
     currentUrl = url;
 
